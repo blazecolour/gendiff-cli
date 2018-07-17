@@ -1,0 +1,45 @@
+{
+  "name": "gendiff-blazecolour-2",
+  "version": "2.0.1",
+  "description": "gendiff cli",
+  "main": "dist/index.js",
+  "bin": {
+    "gendiff": "dist/bin/gendiff.js"
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "babel-node": "babel-node",
+    "eslint": "eslint",
+    "build": "NODE_ENV=production babel src --out-dir dist --source-maps inline",
+    "prepublishOnly": "npm run build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/blazecolour/project-lvl2-s297.git"
+  },
+  "author": "Serg Shitikov <936x936@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/blazecolour/project-lvl2-s297/issues"
+  },
+  "homepage": "https://github.com/blazecolour/project-lvl2-s297#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-core": "^6.26.3",
+    "babel-eslint": "^8.2.6",
+    "babel-preset-env": "^1.7.0",
+    "babel-preset-stage-0": "^6.24.1",
+    "eslint": "^5.1.0",
+    "eslint-config-airbnb-base": "^13.0.0",
+    "eslint-plugin-import": "^2.13.0",
+    "jest": "^23.4.1",
+    "jest-cli": "^23.4.1"
+  },
+  "dependencies": {
+    "commander": "^2.16.0",
+    "lodash": "^4.17.10"
+  }
+}
