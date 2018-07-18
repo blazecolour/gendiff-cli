@@ -6,6 +6,6 @@
 
 [![NPM](https://nodei.co/npm/gendiff-blazecolour-2.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gendiff-blazecolour-2/)
 
-## Instal
+## Install
 
 ```npm i gendiff-blazecolour-2```
