@@ -19,4 +19,13 @@ describe('difference files', () => {
     const expected = fs.readFileSync('__tests__/__fixtures__/treeDiff', 'utf8');
     expect(actual).toBe(expected);
   });
+
+  it('ini', () => {
+    const actual = genDiff(
+      '__tests__/__fixtures__/before.ini',
+      '__tests__/__fixtures__/after.ini',
+    );
+    const expected = fs.readFileSync('__tests__/__fixtures__/treeDiff', 'utf8');
+    expect(actual).toBe(expected);
+  });
 });

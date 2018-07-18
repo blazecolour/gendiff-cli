@@ -1,12 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 import _ from 'lodash';
-import yaml from 'js-yaml';
-
-const parsers = {
-  json: data => JSON.parse(data),
-  yml: data => yaml.safeLoad(data),
-};
+import getParsers from './parsers';
 
 const propertyActions = [
   {
@@ -34,9 +29,9 @@ const propertyActions = [
 const genDiff = (file1, file2) => {
   const data1 = fs.readFileSync(file1, 'utf8');
   const data2 = fs.readFileSync(file2, 'utf8');
-  const extension = path.extname(file1).slice(1);
-  const obj1 = parsers[extension](data1);
-  const obj2 = parsers[extension](data2);
+  const extension = path.extname(file1);
+  const obj1 = getParsers(extension)(data1);
+  const obj2 = getParsers(extension)(data2);
   const keys = _.union(Object.keys(obj1), Object.keys(obj2));
   const getPropertyActions = key => propertyActions.find(({ check }) => check(obj1, obj2, key));
   const result = keys.reduce((acc, key) => {

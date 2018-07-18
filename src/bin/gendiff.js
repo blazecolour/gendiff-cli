@@ -6,7 +6,7 @@ import genDiff from '..';
 const program = commander;
 
 program
-  .version('2.0.3', '-v, --version')
+  .version('2.0.4', '-v, --version')
   .description('Compares two configuration files and shows a difference.')
   .option('-f, --format[type]', 'Output format')
   .arguments('<firstConfig> <secondConfig>')
