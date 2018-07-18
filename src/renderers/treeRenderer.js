@@ -11,14 +11,14 @@ const stringify = (value, depth = 1, defaultTab = 4) => {
   return `{\n${body}\n${' '.repeat(tab - defaultTab)}}`;
 };
 
-const render = (ast, depth = 1, defaultTab = 4) => {
+const treeRender = (ast, depth = 1, defaultTab = 4) => {
   const tab = depth * defaultTab;
 
   const buildStr = (name, value, symb = ' ') => (
     `${' '.repeat(tab - 2)}${symb} ${name}: ${stringify(value, depth + 1)}`);
 
   const handlers = {
-    nested: node => `${' '.repeat(tab)}${node.key}: ${render(node.children, depth + 1)}`,
+    nested: node => `${' '.repeat(tab)}${node.key}: ${treeRender(node.children, depth + 1)}`,
     unchanged: node => buildStr(node.key, node.value),
     changed: node => [
       buildStr(node.key, node.afterValue, '+'),
@@ -32,4 +32,4 @@ const render = (ast, depth = 1, defaultTab = 4) => {
   return `{\n${result}\n${' '.repeat(tab - defaultTab)}}`;
 };
 
-export default render;
+export default treeRender;
