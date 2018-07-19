@@ -2,7 +2,7 @@ install:
 		npm install
 
 start: 
-		npm run babel-node -- src/bin/gendiff.js --format plain before.yml after.yml
+		npm run babel-node -- src/bin/gendiff.js --format json before.json after.json
 
 test:
 		npm test

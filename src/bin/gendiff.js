@@ -6,10 +6,9 @@ import genDiff from '..';
 const program = commander;
 
 program
-  .version('2.0.6', '-v, --version')
+  .version('2.0.7', '-v, --version')
   .description('Compares two configuration files and shows a difference.')
-  .option('-f, --format [type]', 'Output format: tree, plain', 'tree')
+  .option('-f, --format [type]', 'Output format: tree, plain, json', 'tree')
   .arguments('<firstConfig> <secondConfig>')
-  .action((after, before, options) => console.log(genDiff(before, after, options.format)));
-
-program.parse(process.argv);
+  .action((before, after, options) => console.log(genDiff(before, after, options.format)))
+  .parse(process.argv);
