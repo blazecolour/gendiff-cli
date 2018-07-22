@@ -32,10 +32,10 @@ const plainRender = (ast, parent = '') => {
       return buildStr(node, body);
     },
     added: (node) => {
-      const stringify = ` with ${_.isObject(node.value)
+      const str = ` with ${_.isObject(node.value)
         ? 'complex value'
         : `value: ${getValue(node.value)}`}`;
-      return buildStr(node, stringify);
+      return buildStr(node, str);
     },
     deleted: node => buildStr(node),
   };
