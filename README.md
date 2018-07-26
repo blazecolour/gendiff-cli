@@ -29,9 +29,9 @@ $ gendiff [options] <file1> <file2>
 #### API usage:
 
 ```js
-import gendiff from 'gendiff-blazecolour-2';
+import genDiff from 'gendiff-blazecolour-2';
 
-gendiff('path/to/file1', 'path/to/file2', format);
+genDiff('path/to/file1', 'path/to/file2', format);
 ```
 
 ## CLI options
@@ -87,7 +87,7 @@ file2:
 
 tree format:
 
-```
+```diff
 {
     host: hexlet.io
   + timeout: 20
@@ -100,12 +100,16 @@ tree format:
 
 plain format:
 
-```
+```diff
 Property 'timeout' was changed. From '50' to '20'
 Property 'proxy' was deleted
 Property 'follow' was deleted
 Property 'verbose' was added with value: 'true'
 ```
+
+## Asciinema
+
+[![asciicast](https://asciinema.org/a/193582.png)](https://asciinema.org/a/193582)
 
 ## License
 
