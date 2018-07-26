@@ -1,6 +1,6 @@
 {
   "name": "gendiff-blazecolour-2",
-  "version": "2.0.7",
+  "version": "2.1.0",
   "description": "gendiff cli",
   "main": "dist/index.js",
   "bin": {
