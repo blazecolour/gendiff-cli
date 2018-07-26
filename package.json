@@ -19,14 +19,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/blazecolour/project-lvl2-s297.git"
+    "url": "git+https://github.com/blazecolour/gendiff-cli.git"
   },
   "author": "Serg Shitikov <936x936@gmail.com>",
-  "license": "ISC",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/blazecolour/project-lvl2-s297/issues"
+    "url": "https://github.com/blazecolour/gendiff-cli/issues"
   },
-  "homepage": "https://github.com/blazecolour/project-lvl2-s297#readme",
+  "homepage": "https://github.com/blazecolour/gendiff-cli#readme",
   "jest": {
     "testEnvironment": "node"
   },

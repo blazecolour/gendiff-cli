@@ -1,8 +1,8 @@
 # gendiff-cli
 
-[![Maintainability](https://api.codeclimate.com/v1/badges/0c96c255338746ec8e85/maintainability)](https://codeclimate.com/github/blazecolour/project-lvl2-s297/maintainability) 
-[![Coverage Status](https://coveralls.io/repos/github/blazecolour/project-lvl2-s297/badge.svg?branch=master)](https://coveralls.io/github/blazecolour/project-lvl2-s297?branch=master) 
-[![Build Status](https://travis-ci.org/blazecolour/project-lvl2-s297.svg?branch=master)](https://travis-ci.org/blazecolour/project-lvl2-s297)
+[![Maintainability](https://api.codeclimate.com/v1/badges/0d582b2095c180cd12c3/maintainability)](https://codeclimate.com/github/blazecolour/gendiff-cli/maintainability)
+[![Coverage Status](https://coveralls.io/repos/github/blazecolour/gendiff-cli/badge.svg?branch=master)](https://coveralls.io/github/blazecolour/gendiff-cli?branch=master)
+[![Build Status](https://travis-ci.org/blazecolour/gendiff-cli.svg?branch=master)](https://travis-ci.org/blazecolour/gendiff-cli)
 
 [![NPM](https://nodei.co/npm/gendiff-blazecolour-2.png?downloads=true&downloadRank=true&stars=true)](https://nodei.co/npm/gendiff-blazecolour-2/)
 
