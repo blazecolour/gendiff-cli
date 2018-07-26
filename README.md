@@ -10,41 +10,59 @@ A tool for files differences by parsing them into AST, sorting them, and compari
 
 ## Install
 
-### CLI:
+#### CLI:
 
 ```npm install -g gendiff-blazecolour-2```
 
-### library:
+#### library:
 
 ```npm install --save gendiff-blazecolour-2```
 
 ## Usage
 
-### CLI usage:
+#### CLI usage:
 
 ```bash
-gendiff [options] <file1> <file2>
+$ gendiff [options] <file1> <file2>
 ```
 
-### API usage:
+#### API usage:
 
 ```js
-import gendiff from 'gendiff-greybutton';
+import gendiff from 'gendiff-blazecolour-2';
 
-gendiff(path/to/file1, path/to/file2, format);
+gendiff('path/to/file1', 'path/to/file2', format);
 ```
 
 ## CLI options
 
 ```
--h, --help          Output usage information
--V, --version       Output the version number
--f, --format [type] Output format [plain, string, json]
+-v, --version        Output the version number
+-f, --format [type]  Output format: tree, plain, json (default: tree)
+-h, --help           Output usage information
 ```
+
+## Available format files
+
+The following extensions are available for input files:
+
+- [x] json
+- [x] yml
+- [x] ini
+
+The output formats:
+
+* tree
+* plain
+* json
 
 ## Examples
 
-Comparing two json files:
+Comparing two json files.
+
+#### Output
+
+file1:
 
 ```json
 {
@@ -55,6 +73,8 @@ Comparing two json files:
 }
 ```
 
+file2:
+
 ```json
 {
   "timeout": 20,
@@ -63,11 +83,11 @@ Comparing two json files:
 }
 ```
 
-```bash
-$ gendiff before.json after.json
-```
+#### input
 
-```diff
+tree format:
+
+```
 {
     host: hexlet.io
   + timeout: 20
@@ -78,6 +98,14 @@ $ gendiff before.json after.json
 }
 ```
 
+plain format:
+
+```
+Property 'timeout' was changed. From '50' to '20'
+Property 'proxy' was deleted
+Property 'follow' was deleted
+Property 'verbose' was added with value: 'true'
+```
 
 ## License
 
